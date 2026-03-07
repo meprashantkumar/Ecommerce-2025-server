@@ -15,22 +15,6 @@ cloudinary.v2.config({
 
 const app = express();
 
-const url = `https://ecommerce-2025-server.onrender.com`;
-const interval = 30000;
-
-function reloadWebsite() {
-  axios
-    .get(url)
-    .then((response) => {
-      console.log("website reloded");
-    })
-    .catch((error) => {
-      console.error(`Error : ${error.message}`);
-    });
-}
-
-setInterval(reloadWebsite, interval);
-
 app.use(express.json());
 app.use(cors());
 
